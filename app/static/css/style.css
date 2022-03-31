@@ -1,3 +1,126 @@
-body{
-    background: red;
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
+
+.login__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: #C7C5F4;
+    
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {
+    padding-left: 20px;
+	background: white;		
+	position: relative;	
+	height: 600px;
+	width: 400px;	
+	box-shadow: 0px 0px 24px #5C5696;
+    border-radius: 35px;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #C7C5F4;
+    border-color: #3e399b;
+	font-size: 14px;
+	margin-top: 30px;
+    padding: 16px;
+    justify-content: center;
+	border-radius: 26px;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 70%;
+	color: #4C489D;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.button__text{
+    align-items: center;
+    justify-items: center;
+}
+
+.login__submit:hover {
+	border-color: #3e399b;
+    background-color: #8380c2;
+    color: #C7C5F4;
+	outline: none;
+}
+
+.by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 30px;
+	height: 30px;
+	width: 70px;
+	color:#dad9f7;
+}
+
+.alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 70px;
+    color: red;
 }
