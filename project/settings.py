@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'PORT': '3306',
-        'OPTIONS':{
+        'OPTIONS': {
             'init_command': 'SET default_storage_engine=InnoDB'
         }
     }

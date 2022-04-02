@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1>Área Restrita</h1>
+        Bem Vindo!
+    {% else %}
+        Acesso negado! Realize o login para poder entrar.
+    {% endif %}
+{% endblock %}
