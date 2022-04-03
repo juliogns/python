@@ -15,8 +15,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-	background-color: #3a5cca;
-	border-radius: 15px;
+	padding-top: 10px;
+	padding-right: 20px;
+	font-size: x-large;
     color: #C7C5F4;
     
 }
