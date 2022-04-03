@@ -7,27 +7,33 @@
             <div class="screen">
                 <div class="screen__content">
                     <form class="login">
+                        <h1 class="login__title">Cadastrar-se</h1>
+
                         <div class="login__field">
-                             <h1 class="login__title">Cadastrar-se</h1>
                             <i class="login__icon fas fa-user"></i>
                             <input class="login__input" type="text" name="name" id="name" placeholder="Nome:">
                         </div>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-lock"></i>
                             <input class="login__input" type="text" name="user" id="user" placeholder="Nome de Usuário:">
                         </div>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-user"></i>
                             <input class="login__input" type="email" name="email" id="email" placeholder="Digite seu E-mail:">
                         </div>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-user"></i>
                             <input class="login__input" type="password" name="password" id="password" placeholder="Crie uma senha:">
                         </div>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-user"></i>
                             <input class="login__input" type="password" name="password-conf" id="password-conf" placeholder="Confirme a senha:">
                         </div>
+                        
                         {% if msg %}
                             <div class="alert {{class}}">
                                 {{msg}}

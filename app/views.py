@@ -1,7 +1,13 @@
+import email
+from re import template
+from unicodedata import name
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+from django.views.generic.edit import UpdateView
+
 
 # Create your views here.
 def home(request):
@@ -50,3 +56,22 @@ def logouts(request):
 #Página inicial do dashboard
 def dashboard(request):
     return render(request, 'dashboard/home.html')
+
+#Formulário de cadastro de usuários
+def changePasswordPanel(request):
+    return render(request, 'dashboard/change-password-panel.html')
+
+#Processa troca de senha
+def changePassword(request):
+    data={}
+    if(request.POST['new_password1'] != request.POST['new_password2']):
+        data['msg'] = 'As senhas não coincidem!'
+        data['class'] = 'alert-danger'
+        return render(request, 'dashboard/change-password-panel.html', data)
+    else:
+        user = User.objects.get(email=request.user.email)
+        user.set_password(request.POST['new_password1'])
+        user.save()
+        logout(request)
+        return redirect('/painel/')
+

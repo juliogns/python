@@ -7,14 +7,18 @@
             <div class="screen">
                 <div class="screen__content">
                     <form class="login">
+                        <h1 class="login__title">Login</h1>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-lock"></i>
                             <input class="login__input" type="text" name="user" id="user" placeholder="Usuário:">
                         </div>
+
                         <div class="login__field">
                             <i class="login__icon fas fa-user"></i>
                             <input class="login__input" type="password" name="password" id="password" placeholder="Senha:">
                         </div>
+                        
                         {% if msg %}
                             <div class="alert {{class}}">
                                 {{msg}}
