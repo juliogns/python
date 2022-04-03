@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
@@ -41,6 +41,11 @@ def dologin(request):
         data['msg'] = 'Usuário ou Senha inválidos!'
         data['class'] = 'alert-danger'
         return render(request,'painel.html',data)
+
+#Processa o logout
+def logouts(request):
+    logout(request)
+    return redirect('/painel/')
 
 #Página inicial do dashboard
 def dashboard(request):

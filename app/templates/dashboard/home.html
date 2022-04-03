@@ -3,8 +3,9 @@
 {% block content %}
     {% if request.user.is_authenticated %}
         <h1>Área Restrita</h1>
-        Bem Vindo!
+        Bem Vindo!<br>
+        <a href="/logouts/">Sair</a>
     {% else %}
-        Acesso negado! Realize o login para poder entrar.
+        Acesso negado! <a href="/painel/">Realize o login</a> para poder entrar.
     {% endif %}
 {% endblock %}
