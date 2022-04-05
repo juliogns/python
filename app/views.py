@@ -9,7 +9,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic.edit import UpdateView
 
 
-# Create your views here.
+#Home
 def home(request):
     return render(request, 'home.html')
 
@@ -24,7 +24,7 @@ def store(request):
         data['msg'] = 'As senhas não coincidem!'
         data['class'] = 'alert-danger'
     else:
-        user = User.objects.create_user(request.POST['name'], request.POST['email'], request.POST['password'])
+        user = User.objects.create_user(request.POST['name'], request.POST['email'], request.POST['password'], )
         user.first_name = request.POST['name']
         user.save()
         data['msg2'] = 'Usuário cadastrado com sucesso!'
@@ -57,7 +57,7 @@ def logouts(request):
 def dashboard(request):
     return render(request, 'dashboard/home.html')
 
-#Formulário de cadastro de usuários
+#Formulário de troca de senha
 def changePasswordPanel(request):
     return render(request, 'dashboard/change-password-panel.html')
 
