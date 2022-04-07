@@ -20,12 +20,38 @@ def create(request):
 #Inserção dos dados dos usuários no banco
 def store(request):
     data={}
+    if not request.POST['name']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
+    if not request.POST['cpf']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
+    if not request.POST['pis']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
+    if not request.POST['email']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
+    if not request.POST['password']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
+    if not request.POST['password-conf']:
+        data['msg'] = 'Preencha TODOS os campos!'
+        data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
     if(request.POST['password'] != request.POST['password-conf']):
         data['msg'] = 'As senhas não coincidem!'
         data['class'] = 'alert-danger'
+        return render(request, 'create.html', data)
     else:
         user = User.objects.create_user(request.POST['name'], request.POST['email'], request.POST['password'], )
         user.first_name = request.POST['name']
+        user.set_cpf = request.POST['cpf']
         user.save()
         data['msg2'] = 'Usuário cadastrado com sucesso!'
         data['class'] = 'alert-succes'
