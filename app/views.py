@@ -51,7 +51,6 @@ def store(request):
     else:
         user = User.objects.create_user(request.POST['name'], request.POST['email'], request.POST['password'], )
         user.first_name = request.POST['name']
-        user.set_cpf = request.POST['cpf']
         user.save()
         data['msg2'] = 'Usuário cadastrado com sucesso!'
         data['class'] = 'alert-succes'
