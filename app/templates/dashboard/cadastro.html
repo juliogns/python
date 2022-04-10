@@ -3,10 +3,10 @@
 {% block content %}
     {% if request.user.is_authenticated %}
         <h1>Área Restrita</h1>
-        Bem Vindo!<br>
-        <a href="/cadastro/">Criar Cadastro Completo</a><br>
-        <a href="/editar-cadastro/">Editar Cadastro</a><br>
-        <a href="/password-panel/">Alterar Senha</a><br>
+        Crie tabelas com de dados e endereço:<br>
+        Informe <a href="/dados/">alguns dados.</a><br>
+        Informe <a href="/endereco/">seu endereco.</a><br>
+        <a href="/dashboard/">Home</a><br>
         <a href="/logouts/">Sair</a>
     {% else %}
         Acesso negado! <a href="/painel/">Realize o login</a> para poder entrar.

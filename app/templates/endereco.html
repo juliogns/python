@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<h3>Cadastro</h3>
+
+<p>
+    Preencha todos os campos.
+</p>
+
+<hr>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+      <p>
+        <label for="id_cpf">Pais:</label>
+        <input type="text" name="pais" maxlength="30" required id="id_pais">
+        
+      </p>
+      <p>
+        <label for="id_pis">Municipio:</label>
+        <input type="text" name="municipio" maxlength="30" required id="id_municipio">
+        
+      </p>
+      <p>
+        <label for="id_pis">UF:</label>
+        <input type="text" name="uf" maxlength="2" required id="id_uf">
+        
+      </p>
+      <p>
+        <label for="id_pis">Rua:</label>
+        <input type="text" name="rua" maxlength="50" required id="id_rua">
+        
+      </p>
+      <p>
+        <label for="id_pis">CEP:</label>
+        <input type="text" name="cep" maxlength="9" required id="id_cep">
+        
+      </p>
+      <p>
+        <label for="id_pis">Número:</label>
+        <input type="text" name="num" maxlength="10" required id="id_num">
+        
+      </p>
+      <p>
+        <label for="id_pis">Complemento:</label>
+        <input type="text" name="compl" maxlength="20" required id="id_compl">
+        
+      </p>
+
+    <button type="submit">
+        Cadastrar
+    </button>
+</form>
+
+<a href="/dashboard/">Home</a><br>
+{% else %}
+        Acesso negado! <a href="/painel/">Realize o login</a> para poder entrar.
+    {% endif %}
+{% endblock %}

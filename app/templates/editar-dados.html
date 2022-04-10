@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<h3>Cadastro</h3>
+
+<p>
+    Preencha todos os campos.
+</p>
+
+<hr>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <p>
+        <label for="id_cpf">Cpf:</label>
+        <input type="text" name="cpf" maxlength="14" required id="id_cpf">
+        
+        
+      </p>
+      <p>
+        <label for="id_pis">Pis:</label>
+        <input type="text" name="pis" maxlength="14" required id="id_pis">
+        
+        
+          
+        
+      </p>
+
+    <button type="submit">
+        Salvar Alterações
+    </button>
+</form>
+
+<a href="/dashboard/">Home</a><br>
+{% else %}
+        Acesso negado! <a href="/painel/">Realize o login</a> para poder entrar.
+    {% endif %}
+{% endblock %}

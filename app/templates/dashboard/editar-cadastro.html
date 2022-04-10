@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1>Área Restrita</h1>
+        Instruções para editar cadastro:<br>
+            - Se quer editar uma tabela de endereço o link é: /editar-endereço/ <br>
+            - Se quer editar uma tabela de dados o link é: /editar-dados/ <br>
+            - Coloque o ID da tabela que você quer editar no final do link entre barras '//' <br>
+                Ex.: <br>
+                 - Quero editar a tabela de ID 7 de dados <br>
+                 - Link: /editar-dados/7/ <br>
+
+                 Ex.2: <br>
+                 - Quero editar a tabela de ID 4 de endereço <br>
+                    - Link: /editar-endereco/4/ <br>
+        
+            obs.: a tabela tem que existir.
+            <a href="/dashboard/">Home</a><br>
+    {% else %}
+        Acesso negado! <a href="/painel/">Realize o login</a> para poder entrar.
+    {% endif %}
+{% endblock %}

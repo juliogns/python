@@ -1,6 +1,6 @@
-var input = document.querySelector('#cpf')
-var input2 = document.querySelector('#cep')
-var input3 = document.querySelector('#pis')
+var input = document.querySelector('#id_cpf')
+var input2 = document.querySelector('#id_cep')
+var input3 = document.querySelector('#id_pis')
 
 input.addEventListener('keypress', () => {
     let inputLength = input.value.length
