@@ -37,6 +37,7 @@ Entender o funcionamento de um banco de dados não é uma tarefa tão simples.
 Para eu ter completado o nível 1 com êxito eu teria que, de alguma forma, buscar as informações do banco para mostrar na minha app web:
  - Buscar o nome do usuario para fazer o "Olá {NOME_DO_USUARIO}".
  - Buscar os dados cadastrados na tabela para eles aparecerem na hora de edita-los e tornar mais fácil a edição no caso de uma edição mínima.
+ 
 Relacionamento de tabelas:
  - O conteúdo sobre relacionamento de tabelas e python é um pouco escasso, tive aulas de banco de dados, aprendi sobre relacionamento na teoria (usando primary key e foreign key) e mesmo assim não consegui relacionar da forma correta.
 Uma das coisas que mais me faltou foi saber criar um cadastro já com (user, email, senha, cpf, pis e endereço) de uma vez e direcionar todos esses dados para um user só. Para que apenas ele pudesse alterar os dados dele. Sinto que isso é um dificuldade relacionada à inexperiência com banco de dados.
