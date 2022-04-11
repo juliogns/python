@@ -1,4 +1,5 @@
 # python
+ Abrir: iniciar um servidor local; criar uma maquina virtual e dar pull.
  
  Desafio 1 - Cadastro de Usuário:
 
