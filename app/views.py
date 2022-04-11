@@ -13,18 +13,19 @@ from .models import Dados, Adr
 from django.urls import reverse_lazy
 
 
-#Formulário do painel de login
+#Formulário do painel de cadastro
 def cadastro(request):
     return render(request,'dashboard/cadastro.html')
 
+#Formulário do painel de editar cadastro
 def editarCadastro(request):
     return render(request,'dashboard/editar-cadastro.html')
 
-#Formulário do painel de login
+#Formulário do painel de dados
 def dados(request):
     return render(request,'dados.html')
 
-#Formulário do painel de login
+#Formulário do painel de endereço
 def endereco(request):
     return render(request,'endereco.html')
 
